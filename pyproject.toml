@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "phobia"
+version = "0.0.1"
+description = ""
+authors = ["Alexander Lavrov <internal@egnod.dev>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+sitri = "^0.7.7"
+fastapi = "^0.61.1"
+motor = "^2.3.0"
+loguru = "^0.5.3"
+
+[tool.poetry.dev-dependencies]
+
+[tool.black]
+line-length = 120
+target-version = ['py38']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | build
+  | dist
+  | deploy
+  | .bumpversion.cfg
+)/
+'''
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
